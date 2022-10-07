@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Configration Plugin</title>
+	<script src="jquery.min.js"></script>
+    <script src="../lib/VSS.SDK.min.js"  type="text/javascript"></script>
+	<script src="common-config.js"  type="text/javascript"></script>
+	<link rel="stylesheet" href="common-config.css"/>
+</head>
+<body>
+    <div class="HostConfiExtensionSec">
+        <div class="TopazCLIConfig">
+            <h3 class="sectionTitle">Enter Topaz CLI Configration</h2>
+            <div class="formInputDiv">
+                <label for="CLIHome"> Topaz Workbench CLI Home</label>
+                <input type="text" name="windows_CLI" id="windows_CLI">
+            </div>
+            <div class="formInputDiv">
+                <label for="LinuxTopaz"> Linux Topaz Workbench CLI Home</label>
+                <input type="text" name="linux_CLI" id="linux_CLI">
+            </div>
+        </div>
+        <div class="HostConfiguration">
+            <h3 class="sectionTitle">Host Configuration</h2>
+            <div class="formInputDiv">
+                <label for="HostPort"> Host:port</label>
+                <div class="hostlist">
+                    <select id="host" class="hostListBinding">
+                        <option value="">Create New Host</option> 
+                    </select>
+                </div>
+                
+            </div>
+            <div class="formInputDiv">
+            <input type="text" class="hostInput" name="hostInput" id="hostInput">
+            </div>
+            <div class="formInputDiv">
+                <label for="Description"> Description</label>
+                <input type="text" name="description" id="description">
+            </div>
+            <div class="formInputDiv">
+                <label for="EncryptionProtocol"> Encryption protocol</label>
+                <select name="protocol" id="protocol">
+                    <option value="TLSv1.3">TLSv1.3</option>
+                    <option value="TLSv1.3">TLSv1.2</option>
+                    <option value="TLSv1.2">TLSv1.2</option>
+                    <option value="TLSv1.1">TLSv1.1</option>
+                    <option value="TLSv1">TLSv1</option>
+                    <option value="TLS">TLS</option>
+                    <option value="SSLv3">SSLv3</option>
+                    <option value="Auto">Auto</option>
+                    <option value="NONE">NONE</option>
+                </select>
+            </div>
+            <div class="formInputDiv">
+                <label for="CodePage"> Code Page</label>
+                <select name="code_page" id="code_page">
+                    <option value="1047 - Latin 1">1047 - Latin 1</option>
+                    <option value="IBM - STD">IBM - STD</option>
+                </select>
+            </div>
+            <div class="formInputDiv">
+                <label for="ReadWriteTimeOut"> Read/write timeout (minutes)</label>
+                <input type="text" name="timeout" id="timeout">
+            </div>
+            <div class="formInputDiv">
+                <label for="ReadWriteTimeOut">CES URL</label>
+                <input type="text" name="ces_url" id="ces_url">
+            </div>
+        </div>
+
+        <div class="buttonDivSection">
+            <div class="btnGroupSec">
+                <button type="submit" class="btn-host" id="save-data" onclick="submitProjectDetails()">Save</button>
+                <button type="submit" class="btn-host" id="clear-data"  onclick="ClearFields()">Clear</button>
+                <button type="submit" class="btn-host" id="delete-data" onclick="deleteProjectDetails()">Delete</button>    
+            </div>            
+        </div>  
+       
+    </div>
+     
+</body>
+</html>

@@ -1,0 +1,90 @@
+{
+    "manifestVersion": 1,
+    "id": "common-config-extension",
+    "publisher": "BMC",
+    "version": "1.0.1",
+    "name": "BMC Common Configuration",
+    "description": "The BMC Common Configuration provides configuration settings that are shared by other BMC Azure extensions.",
+    "public":false,
+    "categories": ["Azure Pipelines"],
+	"icons": {
+        "default": "images/common_config_icon.png"        
+    },
+	"repository": {
+        "type": "git",
+        "uri": "https://github.com/bmc-compuware/ispw-source-code-downloader-azure-extension"
+    },
+	 "links": {
+        "getstarted": {
+            "uri": "https://github.com/bmc-compuware/ispw-source-code-downloader-azure-extension/master/README.md"
+        },
+        "support": {
+            "uri": "https://support.bmc.com"     
+        },
+        "license":{
+            "uri":"https://github.com/bmc-compuware/ispw-source-code-downloader-azure-extension/master/LICENSE"
+        }
+
+    },
+	"content": {
+        "details": {
+            "path": "README.md"
+        },
+		"license": {
+            "path": "LICENSE"
+        }
+		
+    },
+	 "tags": [
+        "BMC",
+        "Common Configuration",
+        "Mainframe",
+        "Continuous Integration",
+		"Host Connections"
+    ]
+	,
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "Compuware-Common-Config-hub",
+            "type": "ms.vss-web.hub",
+            "targets": [
+                "ms.vss-build-web.build-release-hub-group"
+            ],
+            "properties": {
+                "name": "BMC Common Configuration",
+                "uri": "src/common-config.html"
+            }
+        }
+    ],
+    "files": [
+         {
+            "path": "src/common-config.html",
+            "addressable": true
+        },
+		
+		{
+            "path": "src/common-config.css",
+            "addressable": true
+        },
+		
+		{
+            "path": "src/jquery.min.js",
+            "addressable": true
+        },		
+		{
+            "path": "src/common-config.js",
+            "addressable": true
+        }
+		,
+        {
+            "path": "node_modules/vss-web-extension-sdk/lib",
+            "addressable": true,
+            "packagePath": "lib"
+        }
+    ]
+}

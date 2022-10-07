@@ -1,0 +1,96 @@
+body {
+    background-color: rgba(248, 248, 248, 1);
+    font-size: .875rem;
+    font-family: "Segoe UI VSS (Regular)", "Segoe UI", "-apple-system", BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    flex-wrap: nowrap;
+}
+
+.HostConfiExtensionSec {
+    width: 45%;
+    margin: auto;
+    padding: 0 30px;
+
+}
+
+.HostConfiguration,
+.TopazCLIConfig,
+.buttonDivSection {
+    padding: 15px 0;
+}
+
+.formInputDiv {
+    padding: 20px 0;
+}
+
+.formInputDiv label {
+    float: left;
+}
+
+.formInputDiv input {
+    float: right;
+    width: 40%;
+    border-radius: 0px;
+    border: 1px solid;
+    height: 25px !important;
+}
+
+.formInputDiv input:focus {
+    border: 1px solid rgb(0, 120, 212) !important;
+    outline: none !important;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+.formInputDiv select {
+    float: right;
+    width: 41%;
+    height: 22px;
+    border-radius: 0px;
+    min-height: 30px;
+    height: auto;
+}
+
+.formInputDiv select:focus {
+    border: 1px solid rgb(0, 120, 212) !important;
+    outline: none !important;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+.btn-host {
+    color: #fff;
+    /* padding: 8px 30px; */
+    margin-left: 10px;
+    border: none;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: rgb(0, 120, 212);
+}
+
+.buttonDivSection {
+    height: 40px;
+}
+
+.btnGroupSec {
+    float: right;
+}
+
+#hostInput {
+    display: none;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: rgb(0, 120, 212);
+}
