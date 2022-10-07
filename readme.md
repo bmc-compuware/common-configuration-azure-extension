@@ -1,4 +1,4 @@
-#BMC Common Configuration
+# BMC Common Configuration
 
 
 ## Overview
