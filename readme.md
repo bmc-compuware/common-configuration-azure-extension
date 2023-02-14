@@ -18,15 +18,15 @@ Install the BMC common configuration extension according to the Azure Devops ins
 
 ![](images/bmccommonconfig.png)
 
-In order to download Endevor, PDS, and ISPW members you will need to point to an installed Topaz Workbench Command Line Interface (CLI). The Topaz Workbench CLI will work with host connection(s) you also need to configure to download Endevor, PDS, and ISPW members.
+In order to download Endevor, PDS, and Code Pipeline members you will need to point to an installed Workbench for Eclipse Command Line Interface (CLI). The Workbench for Eclipse CLI will work with host connection(s) you also need to configure to download Endevor, PDS, and Code Pipeline members.
 
-Navigate to Pipelines and go to Compuware Configurations section.
+Navigate to Pipelines and go to BMC Common Configuration section.
 
-- **Windows Topaz Workbench CLI home** : Point to the Windows installation location of the CLI. If necessary, change the default values given to match the correct installation location.
+- **Windows Workbench for Eclipse CLI home** : Point to the Windows installation location of the CLI. If necessary, change the default values given to match the correct installation location.
 
-- **Linux Topaz Workbench CLI home** : Point to the Linux installation location of the CLI. If necessary, change the default values given to match the correct installation location.
+- **Linux Workbench for Eclipse CLI home** : Point to the Linux installation location of the CLI. If necessary, change the default values given to match the correct installation location.
 
-![](docs/images/info.svg) The Topaz Workbench CLI must be installed on the machine that is configured to run the job.
+![](docs/images/info.svg) The Workbench for Eclipse CLI must be installed on the machine that is configured to run the job.
 
 **Host connections**
 
@@ -42,7 +42,7 @@ Navigate to Pipelines and go to Compuware Configurations section.
 
 - **Read/write timeout (minutes)** : Enter the number of minutes for the plugin to wait for a response from the host before timing out.
 
-- **CES URL** : Optionally, enter a URL for Compuware Enterprise Services (CES). This URL is used by other Compuware plugins that leverage REST APIs hosted by CES, for example Compuware's ISPW.
+- **CES URL** : Optionally, enter a URL for Common Enterprise Services (CES). This URL is used by other BMC plugins that leverage REST APIs hosted by CES, for example BMC's Code Pipeline.
 
 
 ## Product Assistance
@@ -61,7 +61,7 @@ At BMC, we strive to make our products and documentation the best in the industr
 
 - The name, release number, and build number of your product. This information is displayed in the installed extensions page. Apply filter: BMC in order to display all of the installed BMC extension.
 
-- Environment information, such as the operating system and release on which the Topaz CLI is installed.
+- Environment information, such as the operating system and release on which the Workbench for Eclipse CLI is installed.
 
 You can contact BMC in one of the following ways:
 
