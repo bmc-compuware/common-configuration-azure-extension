@@ -14,7 +14,7 @@ The following are required to use this plugin:
 
 Install the BMC AMI common configuration extension according to the Azure Devops instructions for installing extensions.
 
-## Configuring for Topaz Workbench CLI & Host Connections
+## Configuring for Workbench for Eclipse CLI & Host Connections
 
 ![](images/bmccommonconfig.png)
 
