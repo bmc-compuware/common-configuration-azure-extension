@@ -1,9 +1,9 @@
-# BMC Common Configuration
+# <img src="images/common_config_icon.png" width="45" height="45">BMC AMI Common Configuration
 
 
 ## Overview
 
-The BMC Common Configuration provides configuration settings that are shared by other BMC Azure extensions.
+The BMC AMI Common Configuration provides configuration settings that are shared by other BMC Azure extensions.
 
 ## Prerequisites
 
@@ -12,7 +12,7 @@ The following are required to use this plugin:
 
 ## Installing extensions in a Azure Devops Server Instance
 
-Install the BMC common configuration extension according to the Azure Devops instructions for installing extensions.
+Install the BMC AMI common configuration extension according to the Azure Devops instructions for installing extensions.
 
 ## Configuring for Topaz Workbench CLI & Host Connections
 
@@ -20,7 +20,7 @@ Install the BMC common configuration extension according to the Azure Devops ins
 
 In order to download Endevor, PDS, and Code Pipeline members you will need to point to an installed Workbench for Eclipse Command Line Interface (CLI). The Workbench for Eclipse CLI will work with host connection(s) you also need to configure to download Endevor, PDS, and Code Pipeline members.
 
-Navigate to Pipelines and go to BMC Common Configuration section.
+Navigate to Pipelines and go to BMC AMI Common Configuration section.
 
 - **Windows Workbench for Eclipse CLI home** : Point to the Windows installation location of the CLI. If necessary, change the default values given to match the correct installation location.
 

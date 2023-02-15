@@ -3,8 +3,8 @@
     "id": "common-config-extension",
     "publisher": "BMC",
     "version": "1.0.2",
-    "name": "BMC Common Configuration",
-    "description": "The BMC Common Configuration provides configuration settings that are shared by other BMC Azure extensions.",
+    "name": "BMC AMI Common Configuration",
+    "description": "The BMC AMI Common Configuration provides configuration settings that are shared by other BMC Azure extensions.",
     "public":false,
     "categories": ["Azure Pipelines"],
 	"icons": {
@@ -56,7 +56,7 @@
                 "ms.vss-build-web.build-release-hub-group"
             ],
             "properties": {
-                "name": "BMC Common Configuration",
+                "name": "BMC AMI Common Configuration",
                 "uri": "src/common-config.html"
             }
         }
