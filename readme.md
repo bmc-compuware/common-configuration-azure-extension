@@ -7,10 +7,10 @@ The BMC Common Configuration provides configuration settings that are shared by 
 
 ## Prerequisites
 
-The following are required to use this plugin:
-- On Premise Azure DevOps Server.
+The following are required to use this extension:
+- Azure Pipelines - in Azure DevOps Services or Azure DevOps Server
 
-## Installing extensions in a Azure Devops Server Instance
+## Installing extensions in an Azure Pipelines - in Azure DevOps Services or Azure DevOps Server
 
 Install the BMC common configuration extension according to the Azure Devops instructions for installing extensions.
 
@@ -40,9 +40,9 @@ Navigate to Pipelines and go to Compuware Configurations section.
 
 - **Code page** : Select the desired code page to be used for this connection. The code page is used to translate data sent to and from the host. The default is 1047.
 
-- **Read/write timeout (minutes)** : Enter the number of minutes for the plugin to wait for a response from the host before timing out.
+- **Read/write timeout (minutes)** : Enter the number of minutes for the extension to wait for a response from the host before timing out.
 
-- **CES URL** : Optionally, enter a URL for Compuware Enterprise Services (CES). This URL is used by other Compuware plugins that leverage REST APIs hosted by CES, for example Compuware's ISPW.
+- **CES URL** : Optionally, enter a URL for Compuware Enterprise Services (CES). This URL is used by other Compuware extensions that leverage REST APIs hosted by CES, for example Compuware's ISPW.
 
 
 ## Product Assistance
