@@ -1,4 +1,4 @@
-# <img src="images/common_config_icon.png" width="45" height="45">BMC AMI Common Configuration
+# BMC AMI Common Configuration
 
 
 ## Overview
