@@ -6,12 +6,19 @@ var connectionData = {};
 var hostValue = [];
 var windowCLI;
 var linuxCLI;
+var errorMessage = '';
 var activeNewHost = false;
 
 /*
 function used to load stored credentials on page load.
 */
 $(document).ready(function () {
+    var hostConnectionError = false;
+    $("#hostConnectionFormat").hide();
+    $("#hostInput").keyup(function () {
+        validateHostConnection();
+    });
+    loadCodePage();
     VSS.init();
     VSS.getService(VSS.ServiceIds.ExtensionData).then(function (dataService) {
         // Get value in user scope
@@ -36,13 +43,16 @@ $(document).ready(function () {
 
     $(".hostListBinding").change(function () {
         $(".hostInput").hide();
+        $("#lblHostPort").hide();
+        $("#hostConnectionError").hide();
         // if(this.value==="select") return ;
-
+        
         activeNewHost = false;
 
         if (this.value === "") {
             activeNewHost = true;
             $(".hostInput").show();
+            $("#lblHostPort").show();
             ClearFields();
             return;
         }
@@ -89,14 +99,72 @@ function deleteProjectDetails() {
         dataService.setValue("hostconnection", hostConnections).then(function (value) {
             console.log(value);
         });
+        errorMessage='Host Connection removed successfully!!!';
+        $(".sectionMessage").show();
+        $(".sectionMessage").html(errorMessage);
+        $(".sectionMessage").css("color", "blue");
     });
     ClearFields();
+}
+
+/**
+ * 
+ * @returns Method used to validate host connection format
+ */
+function validateHostConnection() {
+    var hostConnectionString = $("#hostInput").val();
+    if (hostConnectionString.indexOf(':') < 0 && activeNewHost) {
+        $("#hostConnectionFormat").show();
+        hostConnectionError = false;
+        return false;
+    }
+    else {
+        hostConnectionError = false;
+        $("#hostConnectionFormat").hide();
+        return true;
+    }
+}
+
+
+/**
+ * Method use to populate code page dropdown by using data from file.
+ */
+function loadCodePage() {
+    var $codePage = $("#code_page");
+    $.get('codePage.txt', function (data) {
+        var codePages = data.split('\n');
+        for (var i = 0; i < codePages.length; i++) {
+            $codePage.append($("<option />").val(codePages[i]).text(codePages[i]));
+        }
+    });
 }
 
 /*
 function used to save new host connection
 */
 function submitProjectDetails() {
+    errorMessage='';
+    validateHostConnection();
+    if (!document.getElementById('description').value) {
+        errorMessage = errorMessage + 'description';
+    } else if (!document.getElementById('protocol').value) {
+        errorMessage = errorMessage  + 'protocol';
+    } else if (!document.getElementById('code_page').value) {
+        errorMessage = errorMessage  + 'code_page';
+    } else if (!document.getElementById('timeout').value) {
+        errorMessage = errorMessage  + 'timeout';
+    } else if (!document.getElementById('ces_url').value) {
+        errorMessage = errorMessage  + 'ces_url';
+    }
+   if(errorMessage)
+   {
+    errorMessage='Required '+errorMessage;
+    $(".sectionMessage").html(errorMessage);
+    $(".sectionMessage").css("color", "red");  
+    $(".sectionMessage").show();
+    return;
+   }
+
 
     connectionData = {
         "host": activeNewHost ? $('#hostInput').val() : $('#host').val(),
@@ -119,6 +187,10 @@ function submitProjectDetails() {
         dataService.setValue("linux_CLI", document.getElementById('linux_CLI').value).then(function (value) {
             console.log(value);
         });
+    errorMessage='Host Connection added successfully!!!';
+    $(".sectionMessage").show();
+    $(".sectionMessage").html(errorMessage);
+    $(".sectionMessage").css("color", "blue");  
     });
     if (activeNewHost)
         appendHost([connectionData.host]);
@@ -129,7 +201,7 @@ function submitProjectDetails() {
 function used to clear all fields from form.
 */
 function ClearFields() {
-
+    errorMessage='';
     document.getElementById("host").value = "";
     document.getElementById('hostInput').value = "";
     document.getElementById("description").value = "";
@@ -137,4 +209,7 @@ function ClearFields() {
     document.getElementById("code_page").value = "";
     document.getElementById("timeout").value = "";
     document.getElementById("ces_url").value = "";
+    $("#hostConnectionFormat").hide();
+    $(".sectionMessage").hide();
+    
 } 

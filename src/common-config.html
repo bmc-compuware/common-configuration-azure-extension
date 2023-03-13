@@ -10,39 +10,44 @@
 	<link rel="stylesheet" href="common-config.css"/>
 </head>
 <body>
+    <div>
+        <h3 class="sectionMessage"></h3>
+    </div>
     <div class="HostConfiExtensionSec">
         <div class="TopazCLIConfig">
-            <h3 class="sectionTitle">Enter Workbench for Eclipse CLI Configration</h2>
+            <h3 class="sectionTitle">Enter Topaz CLI Configuration</h2>
             <div class="formInputDiv">
-                <label for="CLIHome"> Windows Workbench for Eclipse CLI Home</label>
+                <label for="CLIHome"> Topaz Workbench CLI Home</label>
                 <input type="text" name="windows_CLI" id="windows_CLI">
             </div>
             <div class="formInputDiv">
-                <label for="LinuxTopaz"> Linux Workbench for Eclipse CLI Home</label>
+                <label for="LinuxTopaz"> Linux Topaz Workbench CLI Home</label>
                 <input type="text" name="linux_CLI" id="linux_CLI">
             </div>
         </div>
         <div class="HostConfiguration">
             <h3 class="sectionTitle">Host Configuration</h2>
             <div class="formInputDiv">
-                <label for="HostPort"> Host:port</label>
                 <div class="hostlist">
                     <select id="host" class="hostListBinding">
                         <option value="">Create New Host</option> 
                     </select>
                 </div>
-                
             </div>
             <div class="formInputDiv">
-            <input type="text" class="hostInput" name="hostInput" id="hostInput">
+             <label for="HostPort" id="lblHostPort"> Host:port</label>
+            <input type="text" class="hostInput" name="hostInput" id="hostInput" required>
+            <label for="hostConnectionError" id="hostConnectionFormat">
+                **Host Connection should be in Host:Port format!!!
+            </label>
             </div>
             <div class="formInputDiv">
                 <label for="Description"> Description</label>
-                <input type="text" name="description" id="description">
+                <input type="text" name="description" id="description" required>
             </div>
             <div class="formInputDiv">
                 <label for="EncryptionProtocol"> Encryption protocol</label>
-                <select name="protocol" id="protocol">
+                <select name="protocol" id="protocol" required>
                     <option value="TLSv1.3">TLSv1.3</option>
                     <option value="TLSv1.3">TLSv1.2</option>
                     <option value="TLSv1.2">TLSv1.2</option>
@@ -56,18 +61,18 @@
             </div>
             <div class="formInputDiv">
                 <label for="CodePage"> Code Page</label>
-                <select name="code_page" id="code_page">
-                    <option value="1047 - Latin 1">1047 - Latin 1</option>
-                    <option value="IBM - STD">IBM - STD</option>
+                <select name="code_page" id="code_page" required>
+                    <!-- <option value="1047 - Latin 1">1047 - Latin 1</option>
+                    <option value="IBM - STD">IBM - STD</option> -->
                 </select>
             </div>
             <div class="formInputDiv">
                 <label for="ReadWriteTimeOut"> Read/write timeout (minutes)</label>
-                <input type="text" name="timeout" id="timeout">
+                <input type="number" name="timeout" id="timeout" required>
             </div>
             <div class="formInputDiv">
                 <label for="ReadWriteTimeOut">CES URL</label>
-                <input type="text" name="ces_url" id="ces_url">
+                <input type="text" name="ces_url" id="ces_url" required>
             </div>
         </div>
 
