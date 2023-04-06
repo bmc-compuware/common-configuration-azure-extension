@@ -2,9 +2,9 @@
     "manifestVersion": 1,
     "id": "common-config-extension",
     "publisher": "BMC",
-    "version": "1.0.5",
-    "name": "BMC Common Configuration",
-    "description": "The BMC Common Configuration provides configuration settings that are shared by other BMC Azure extensions.",
+    "version": "2.0.0",
+    "name": "BMC AMI Common Configuration",
+    "description": "The BMC AMI Common Configuration provides configuration settings that are shared by other BMC Azure extensions.",
     "public":true,
     "categories": ["Azure Pipelines"],
 	"icons": {
@@ -37,7 +37,7 @@
     },
 	 "tags": [
         "BMC",
-        "Common Configuration",
+        "BMC AMI Common Configuration",
         "Mainframe",
         "Continuous Integration",
 		"Host Connections"
